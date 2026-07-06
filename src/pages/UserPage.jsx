@@ -7,6 +7,7 @@ const UserPage = () => {
     
 
   return (
+     <>    
     <div className="mt-5">
         <h2>Users</h2>
         <hr />
@@ -15,22 +16,20 @@ const UserPage = () => {
                 <tr>
                     <th>ID</th>
                     <th>nombre</th>
-                    <th>status</th>
-                    <th>imagen</th>
+                    <th>Imagen</th>
+                    <th>Capitulos</th>
                 </tr>
             </thead>
             <tbody>
                 {
                     Users.map(user=> (
-                        <UserRow 
-                         key={user.id}
-                         user={user}/>
+                        <UserRow  key={user.id} user={user}/>
                     ) )
-                }
-                
+                }                
             </tbody>
         </table>
     </div>
+    </>
   )
 }
 
